@@ -15,7 +15,7 @@
   $finder = new DomXPath($dom);
   $classname="container container-vacinometro";
   $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
-  echo $nodes[0]->nodeValue;
+  echo $nodes[0];
   ?>
 
   <h1>Teste Vacinômetro</h1>
