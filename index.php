@@ -8,17 +8,20 @@
 </head>
 
 <body>
+  <h1>Vacinômetro São Paulo</h1>
+
   <?php
-  $xml = file_get_contents("https://www.saopaulo.sp.gov.br/");
-  $doc = new \DOMDocument();
-  $dom->load($xml);
-  $finder = new DomXPath($dom);
-  $classname="container container-vacinometro";
-  $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
-  echo $nodes[0];
+  $html = file_get_contents("https://www.saopaulo.sp.gov.br/");
+  $start = stripos($html, '<div class="container container-vacinometro">');
+
+  $end = stripos($html, '<section class="section section--first">', $offset = $start);
+  $length = $end - $start;
+
+  $htmlSection = substr($html, $start, $length);
+
+  echo $htmlSection;
   ?>
 
-  <h1>Teste Vacinômetro</h1>
 </body>
 
 </html>
