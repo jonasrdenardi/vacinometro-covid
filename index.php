@@ -10,7 +10,12 @@
 <body>
   <?php
   $xml = file_get_contents("https://www.saopaulo.sp.gov.br/");
-  echo "$xml";
+  $doc = new \DOMDocument();
+  $dom->load($xml);
+  $finder = new DomXPath($dom);
+  $classname="container container-vacinometro";
+  $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+  echo $nodes[0]->nodeValue;
   ?>
 
   <h1>Teste Vacinômetro</h1>
