@@ -2,9 +2,10 @@
 <html lang="pt-br">
 
 <head>
-  <title>Vacinômetro Covid</title>
+  <title>Vacinômetro Covid São Paulo</title>
   <script data-ad-client="ca-pub-6059926323992215" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
+  <meta name="description" content="Número de vacinados no estado de São Paulo"/>
 </head>
 
 <body>
